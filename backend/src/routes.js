@@ -1,11 +1,9 @@
 const express = require('express');
-
+const SessionController = require('./controllers/SessionController');
 const routes = express.Router(); //Separando o roteador do express no objeto? routes, assim será possivel acessar os métodos do express.Router() a partir do routes.
 
 
-routes.post('/users', (req, rest) => {                            
-    return rest.json(req.body);         
-});
+routes.post('/sessions', SessionController.store);
 
 module.exports = routes; //Exportando as rotas para a aplicação
 
