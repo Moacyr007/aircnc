@@ -1,7 +1,7 @@
 import React, { useState }from 'react';
 import api from '../../services/api';
 
-export default function Login({ history }){
+export default function Login({ history }){ //history é utilizado pra fazer a navegação
     const [email, setEmail] = useState(''); //email é iniciado com valor em branco e depois recebe me tempo real o setEmail que é o estado do email
 
 
